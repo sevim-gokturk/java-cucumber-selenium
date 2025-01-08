@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3  # Checkout the code from the repository
 
       - name: Set up JDK (using AdoptOpenJDK or OpenJDK)
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v2
         with:
           java-version: '11'  # You can change this to the version of Java you are using
           distribution: 'adoptopenjdk'  # Or use 'openjdk'
