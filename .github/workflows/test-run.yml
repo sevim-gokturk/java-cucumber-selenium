@@ -17,11 +17,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3  # Checkout the code from the repository
 
-      - name: Set up JDK (OpenJDK or Adoptium)
+      - name: Set up JDK (using AdoptOpenJDK or OpenJDK)
         uses: actions/setup-java@v3
         with:
           java-version: '11'  # You can change this to the version of Java you are using
-          distribution: 'openjdk'  # Use OpenJDK (if Adoptium fails)
+          distribution: 'adoptopenjdk'  # Or use 'openjdk'
 
       - name: Install Dependencies
         run: |
@@ -29,5 +29,4 @@ jobs:
 
       - name: Run Cucumber Tests
         run: |
-          mvn test -Dcucumber.options="--tags @smoke"  # You can customize the tag or test filtering
-          # This command runs tests with the tag "@smoke". You can adjust it or remove it to run all tests.
+          mvn test -Dcucumber.options="--tags @smoke"  # Customize the tag or test filtering if needed
