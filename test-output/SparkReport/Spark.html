@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke ???? Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 6, 2025 03:38:10 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 8, 2025 04:56:52 pm</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 6, 2025 03:38:10 PM</h3>
+<h3>Jan 8, 2025 04:56:52 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 6, 2025 03:38:12 PM</h3>
+<h3>Jan 8, 2025 04:56:58 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>4</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify user data from Excel file":1.392
+"First Feature File":5.27
 };
 </script>
 <div class="row">
@@ -172,7 +172,23 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@excel</td>
+<td>@iphone</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@google_search</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@smoke</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -199,7 +215,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 3,
+passGrandChild: 4,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -224,7 +240,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@excel</a>
+<a class="dropdown-item" href="#">@iphone</a><a class="dropdown-item" href="#">@google_search</a><a class="dropdown-item" href="#">@smoke</a>
 </ul>
 </li>
 </ul>
@@ -235,9 +251,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Verify user data from Excel file</p>
+            <p class="name">First Feature File</p>
             <p class="text-sm">
-              <span>3:38:10 PM</span> / <span>00:00:01:392</span>
+              <span>16:56:53</span> / <span>00:00:05:270</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -245,10 +261,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify user data from Excel file</h5>
-<span class='badge badge-success'>01.06.2025 3:38:10 PM</span>
-<span class='badge badge-danger'>01.06.2025 3:38:12 PM</span>
-<span class='badge badge-default'>00:00:01:392</span>
+<h5 class="test-status text-pass">First Feature File</h5>
+<span class='badge badge-success'>01.08.2025 16:56:53</span>
+<span class='badge badge-danger'>01.08.2025 16:56:58</span>
+<span class='badge badge-default'>00:00:05:270</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -260,25 +276,28 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify user roles and active status from Excel</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>TC01_Iphone_Search</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.VerifyExcelStepDefs.iLoadTheExcelFileAndSheet(java.lang.String,java.lang.String)">
-                <span>Given I load the Excel file "TestData.xlsx" and sheet "Sheet1"</span>
+              <div class="step pass-bg" title="stepdefinitions.GoogleStepDefs.user_is_on_the_google_page()">
+                <span>Given user is on the google page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.VerifyExcelStepDefs.iReadTheDataFromTheExcelFile()">
-                <span>When I read the data from the Excel file</span>
+              <div class="step pass-bg" title="stepdefinitions.GoogleStepDefs.user_search_for_i_phone_on_google()">
+                <span>When user search for iPhone on google</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.VerifyExcelStepDefs.iVerifyTheFollowingDataExists(io.cucumber.datatable.DataTable)">
-                <span>Then I verify the following data exists:</span>
-      <div><table class='markup-table table '><tr><td>Username</td><td>Password</td><td>Role</td><td>Active</td></tr><tr><td>user1</td><td>pass123</td><td>Admin</td><td>true</td></tr><tr><td>user2</td><td>pass456</td><td>Customer</td><td>true</td></tr><tr><td>user3</td><td>pass789</td><td>Admin</td><td>false</td></tr><tr><td>user4</td><td>pass321</td><td>Customer</td><td>true</td></tr><tr><td>user5</td><td>pass654</td><td>Guest</td><td>false</td></tr></table>
+              <div class="step pass-bg" title="stepdefinitions.GoogleStepDefs.verify_the_page_title_contains_i_phone()">
+                <span>Then verify the page title contains iPhone</span>
+      <div>
       </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleStepDefs.close_the_application()">
+                <span>And close the application</span>
       <div>
       </div>
               </div>
@@ -301,7 +320,7 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -310,12 +329,12 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@excel</p>
+<p class="name">@iphone</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@excel</h4>
+<h4>@iphone</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -329,11 +348,83 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>15:38:10 PM</td>
+<td>16:56:53 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Verify user roles and active status from Excel</a>
+<a href="#" class="linked" test-id='1' id='2'>TC01_Iphone_Search</a>
 <div class="">
-<span class="badge badge-default">Verify user data from Excel file.Verify user roles and active status from Excel</span>
+<span class="badge badge-default">First Feature File.TC01_Iphone_Search</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@google_search</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@google_search</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:56:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>TC01_Iphone_Search</a>
+<div class="">
+<span class="badge badge-default">First Feature File.TC01_Iphone_Search</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:56:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>TC01_Iphone_Search</a>
+<div class="">
+<span class="badge badge-default">First Feature File.TC01_Iphone_Search</span>
 </div>
 </td>
 </tr>
