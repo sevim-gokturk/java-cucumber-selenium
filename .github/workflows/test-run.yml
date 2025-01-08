@@ -17,11 +17,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3  # Checkout the code from the repository
 
-      - name: Set up JDK (Eclipse Adoptium)
+      - name: Set up JDK (OpenJDK or Adoptium)
         uses: actions/setup-java@v3
         with:
           java-version: '11'  # You can change this to the version of Java you are using
-          distribution: 'adoptium'  # Use Adoptium (Eclipse Adoptium) for JDK
+          distribution: 'openjdk'  # Use OpenJDK (if Adoptium fails)
 
       - name: Install Dependencies
         run: |
