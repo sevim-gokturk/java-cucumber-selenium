@@ -10,6 +10,15 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
+  verify-java:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Java versions
+        run: |
+          java -version  # Prints the currently available Java version
+          update-alternatives --list java  # Lists available Java alternatives
+
   test:
     runs-on: ubuntu-latest  # Choose the runner environment
 
@@ -17,11 +26,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3  # Checkout the code from the repository
 
-      - name: Set up JDK (using AdoptOpenJDK or OpenJDK)
+      - name: Set up JDK (OpenJDK)
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # You can change this to the version of Java you are using
-          distribution: 'adoptopenjdk'  # Or use 'openjdk'
+          java-version: '11'  # Set your desired Java version
+          distribution: 'openjdk'  # Use OpenJDK as a fallback
 
       - name: Install Dependencies
         run: |
@@ -29,4 +38,4 @@ jobs:
 
       - name: Run Cucumber Tests
         run: |
-          mvn test -Dcucumber.options="--tags @smoke"  # Customize the tag or test filtering if needed
+          mvn test -Dcucumber.options="--tags @smoke"  # You can customize the tag or test filtering
