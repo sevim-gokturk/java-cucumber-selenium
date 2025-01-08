@@ -36,9 +36,7 @@ jobs:
       - name: Install Dependencies
         run: mvn clean install  # Use Maven to install dependencies and build the project
 
-      # Run Cucumber tests using Maven and filter by tags (e.g., @smoke)
-      - name: Run Cucumber Tests
-        run: mvn test -Dcucumber.options="--tags @smoke"  # You can customize this tag or remove it to run all tests
-
+      - name: Run specific test
+        run: mvn test -Dtest=${{ github.event.inputs.test_class }}
     # Optionally, you can add a step to upload test results or other files if needed
     # For example, upload the test results to an external service or to GitHub artifacts.
