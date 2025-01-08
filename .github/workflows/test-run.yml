@@ -10,15 +10,6 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  verify-java:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check Java versions
-        run: |
-          java -version  # Prints the currently available Java version
-          update-alternatives --list java  # Lists available Java alternatives
-
   test:
     runs-on: ubuntu-latest  # Choose the runner environment
 
@@ -26,11 +17,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3  # Checkout the code from the repository
 
-      - name: Set up JDK (OpenJDK)
+      - name: Set up JDK (Eclipse Temurin)
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # Set your desired Java version
-          distribution: 'openjdk'  # Use OpenJDK as a fallback
+          java-version: '11'  # Set your desired Java version (11, 17, or 21)
+          distribution: 'temurin'  # Use Temurin for JDK
+          java-package: 'jdk'  # Ensure you're getting the JDK package
+          architecture: 'x64'  # 64-bit architecture
 
       - name: Install Dependencies
         run: |
