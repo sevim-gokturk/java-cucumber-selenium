@@ -1,5 +1,6 @@
 name: Run Cucumber Tests with TestNG
 
+# Trigger this workflow on push and pull_request to the main branch
 on:
   push:
     branches:
@@ -7,28 +8,37 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:  # Allows manual triggering from the GitHub UI
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Choose the runner environment
+    runs-on: ubuntu-latest  # Choose the runner environment (Ubuntu in this case)
 
     steps:
+      # Checkout the code from the repository
       - name: Checkout Code
-        uses: actions/checkout@v3  # Checkout the code from the repository
+        uses: actions/checkout@v3
 
+      # Set up JDK (Eclipse Temurin version 11)
       - name: Set up JDK (Eclipse Temurin)
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # Set your desired Java version (11, 17, or 21)
-          distribution: 'temurin'  # Use Temurin for JDK
-          java-package: 'jdk'  # Ensure you're getting the JDK package
-          architecture: 'x64'  # 64-bit architecture
+          java-version: '11'  # Java version to match your pom.xml settings
+          distribution: 'temurin'  # Use Eclipse Temurin JDK
+          java-package: 'jdk'
+          architecture: 'x64'
 
+      # Print the Java version to verify it's correctly set
+      - name: Check Java version
+        run: java -version
+
+      # Install dependencies using Maven
       - name: Install Dependencies
-        run: |
-          mvn clean install  # Use Maven to install dependencies and build the project
+        run: mvn clean install  # Use Maven to install dependencies and build the project
 
+      # Run Cucumber tests using Maven and filter by tags (e.g., @smoke)
       - name: Run Cucumber Tests
-        run: |
-          mvn test -Dcucumber.options="--tags @smoke"  # You can customize the tag or test filtering
+        run: mvn test -Dcucumber.options="--tags @smoke"  # You can customize this tag or remove it to run all tests
+
+    # Optionally, you can add a step to upload test results or other files if needed
+    # For example, upload the test results to an external service or to GitHub artifacts.
