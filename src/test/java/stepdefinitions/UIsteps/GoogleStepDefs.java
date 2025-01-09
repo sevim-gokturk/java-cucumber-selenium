@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.UIsteps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import pages.GooglePage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
 public class GoogleStepDefs {
 

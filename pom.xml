@@ -7,26 +7,25 @@
     <groupId>org.example</groupId>
     <artifactId>java-selenium-cucumber</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- Selenium: A framework for automating web browser interactions in Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.27.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <!-- No need to download browsers or manage version compatibility.
+        WebDriverManager automates the management of WebDriver binaries, eliminating the need for manual downloading and configuration. -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -40,89 +39,101 @@
             <version>7.20.1</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.3.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-compress</artifactId>
-            <version>1.27.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itextpdf</artifactId>
-            <version>5.5.13.4</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>5.3.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.7.4</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter -->
-        <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
-        <dependency>
-            <groupId>tech.grasshopper</groupId>
-            <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.10.1</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <!-- rest-assured: A Java library for testing RESTful APIs, making it easy to send HTTP requests and validate responses. -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.5.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>12.8.1.jre11</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+        <!-- jackson-mapper-asl: A library for converting between JSON and Java objects (serialization and deserialization), based on Jackson. -->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
+        <!-- postgresql: JDBC driver for connecting Java applications to PostgreSQL databases. -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.30</version> <!-- En güncel sürüm -->
-            <scope>provided</scope>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.4</version>
         </dependency>
-
+        <!-- mysql-connector-java: JDBC driver for connecting Java applications to MySQL databases. -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.23</version>  <!-- or the version you're using -->
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <!-- mssql-jdbc: JDBC driver for connecting Java applications to Microsoft SQL Server databases. -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.8.1.jre11</version>
+        </dependency>
+        <!-- poi-ooxml: Used for working with .xlsx format Excel files (Excel 2007 and newer). -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+        <!-- poi: Used for working with .xls format Excel files (Excel 97-2003). -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+        <!-- commons-compress: Provides functionality for reading and writing compressed files in formats like ZIP, TAR, GZIP, and BZIP2. -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.27.1</version>
+        </dependency>
+        <!-- itextpdf: A library for creating and manipulating PDF documents in Java. -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.13.4</version>
+        </dependency>
+        <!-- javafaker: A library for generating fake data such as names, addresses, and other random data for testing purposes. -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- extentreports-cucumber7-adapter: Integrates ExtentReports with Cucumber 7 for generating detailed test execution reports. -->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.10.1</version>
+        </dependency>
+        <!--Deletable(still will work) Lombok: Simplifies Java development by reducing boilerplate code for getters, setters, constructors, and more -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
+            <!-- maven-compiler-plugin: Configures the Java compiler for the Maven build process.
+            Defines the source and target Java versions for compiling the code. In this case, both source and target versions are set to Java 11. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+            <!-- maven-failsafe-plugin: Used for running integration tests in Maven.
+            It handles test failures gracefully, allowing the build to continue even if tests fail.
+            Can be configured to run specific test classes and skip tests when necessary. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.5.2</version> <!-- Updated from 3.0.0-M1 -->
+                <version>3.5.2</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
@@ -131,30 +142,23 @@
                     </includes>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>11</source> <!-- Use the JDK version that is installed on the runner (11, 17, etc.) -->
-                    <target>11</target> <!-- Ensure the target is set to a version supported by the JDK on the runner -->
-                </configuration>
-            </plugin>
-
+            <!-- maven-surefire-plugin: Runs unit tests during the build process. Configured to run tests in parallel, with 3 JVMs forked and 3 threads used.
+            Also, custom JVM arguments are passed for memory and encoding settings.
+            Includes specific test classes (TestRunner) and ignores test failures without stopping the build process. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
                     <parallel>classes</parallel>
-                    <forkCount>3</forkCount> <!-- Fork 3 JVMs -->
-                    <reuseForks>false</reuseForks> <!-- Disable reuse of forks -->
-                    <threadCount>3</threadCount>
+                    <forkCount>3</forkCount> <!-- Kaç tane JVM'in fork edilmesi gerektiğini belirtir. Bu örnekte, 3 farklı JVM fork edilir. -->
+                    <reuseForks>false</reuseForks> <!-- false olduğunda, her test için yeni JVM başlatılır. -->
+                    <threadCount>3</threadCount> <!--Aynı anda kaç thread'in çalıştırılacağını belirtir. Bu örnekte 3 thread aynı anda çalıştırılacak.-->
                     <argLine>-Duser.language=en</argLine>
-                    <argLine>-Xmx1024m</argLine>
+                    <argLine>-Xmx1024m</argLine> <!-- Maksimum heap boyutunu 1024 MB olarak ayarlar.-->
                     <argLine>-XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <useFile>false</useFile>
+                    <useFile>false</useFile> <!-- false olduğunda, test raporları dosyalarda saklanmaz, konsolda gösterilir. -->
                     <includes>
                         <include>**/runners/*TestRunner*.java</include>
                     </includes>
@@ -184,7 +188,6 @@
                     </executions>
                 </plugin>
                 -->
-
         </plugins>
     </build>
 </project>
