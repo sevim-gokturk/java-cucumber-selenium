@@ -14,7 +14,6 @@ public class GooglePage {
     public  WebElement rejectAll;
     @FindBy(name = "q")
     public WebElement searchBox;
-
     @FindBy(xpath = "(//div[@class='QS5gu sy4vM'])[2]")
     public WebElement popUpOkButton;
 }

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke ???? Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 9, 2025 11:37:21 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 9, 2025 12:24:48 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 9, 2025 11:37:21 AM</h3>
+<h3>Jan 9, 2025 12:24:48 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 9, 2025 11:37:24 AM</h3>
+<h3>Jan 9, 2025 12:24:50 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -123,7 +123,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>4</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>4</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>12</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"First Feature File":2.853
+"Database Testing for School System":1.422
 };
 </script>
 <div class="row">
@@ -172,24 +172,8 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@google_search</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@iphone</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@smoke</td>
-<td>1</td>
+<td>@Db</td>
+<td>4</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -209,13 +193,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
+passChild: 4,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 4,
+passGrandChild: 12,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -240,7 +224,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@google_search</a><a class="dropdown-item" href="#">@iphone</a><a class="dropdown-item" href="#">@smoke</a>
+<a class="dropdown-item" href="#">@Db</a>
 </ul>
 </li>
 </ul>
@@ -251,9 +235,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">First Feature File</p>
+            <p class="name">Database Testing for School System</p>
             <p class="text-sm">
-              <span>11:37:21 AM</span> / <span>00:00:02:853</span>
+              <span>12:24:48 PM</span> / <span>00:00:01:422</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -261,10 +245,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">First Feature File</h5>
-<span class='badge badge-success'>01.09.2025 11:37:21 AM</span>
-<span class='badge badge-danger'>01.09.2025 11:37:24 AM</span>
-<span class='badge badge-default'>00:00:02:853</span>
+<h5 class="test-status text-pass">Database Testing for School System</h5>
+<span class='badge badge-success'>01.09.2025 12:24:48 PM</span>
+<span class='badge badge-danger'>01.09.2025 12:24:50 PM</span>
+<span class='badge badge-default'>00:00:01:422</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -276,28 +260,101 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>TC01_Iphone_Search</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify that a student exists in the database</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.UIsteps.GoogleStepDefs.user_is_on_the_google_page()">
-                <span>Given user is on the google page</span>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_connect_to_the_database(java.lang.String)">
+                <span>Given I connect to the "school" database</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UIsteps.GoogleStepDefs.user_search_for_i_phone_on_google()">
-                <span>When user search for iPhone on google</span>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_query(java.lang.String)">
+                <span>When I query "SELECT * FROM students WHERE first_name = 'Liam' AND last_name = 'Smith';"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UIsteps.GoogleStepDefs.verify_the_page_title_contains_i_phone()">
-                <span>Then verify the page title contains iPhone</span>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.the_result_should_contain_a_student_with_first_name_and_last_name(java.lang.String,java.lang.String)">
+                <span>Then the result should contain a student with first name "Liam" and last name "Smith"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.UIsteps.GoogleStepDefs.close_the_application()">
-                <span>And close the application</span>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify the grade of a specific student</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_connect_to_the_database(java.lang.String)">
+                <span>Given I connect to the "school" database</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_query(java.lang.String)">
+                <span>When I query "SELECT grade FROM students WHERE first_name = 'Sophia' AND last_name = 'Garcia';"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.the_result_should_show_the_grade_as(java.lang.String)">
+                <span>Then the result should show the grade as "76"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Count the total number of students in the database</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_connect_to_the_database(java.lang.String)">
+                <span>Given I connect to the "school" database</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_query(java.lang.String)">
+                <span>When I query "SELECT COUNT(*) AS total_students FROM students;"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.the_result_should_show_the_total_number_of_students_as(java.lang.String)">
+                <span>Then the result should show the total number of students as "14"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>Check if a specific course exists in the database</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_connect_to_the_database(java.lang.String)">
+                <span>Given I connect to the "school" database</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.i_query(java.lang.String)">
+                <span>When I query "SELECT * FROM courses WHERE course_name = 'Mathematics';"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DBsteps.SchoolDbStepDefs.the_result_should_contain_a_course_named(java.lang.String)">
+                <span>Then the result should contain a course named "Mathematics"</span>
       <div>
       </div>
               </div>
@@ -320,22 +377,22 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>4</span>
 </span>
-<p class="name">@google_search</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">@Db</p>
+<p class="duration text-sm">4 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@google_search</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>@Db</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -348,83 +405,41 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:37:21 AM</td>
+<td>12:24:48 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>TC01_Iphone_Search</a>
+<a href="#" class="linked" test-id='1' id='2'>Verify that a student exists in the database</a>
 <div class="">
-<span class="badge badge-default">First Feature File.TC01_Iphone_Search</span>
+<span class="badge badge-default">Database Testing for School System.Verify that a student exists in the database</span>
 </div>
 </td>
 </tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@iphone</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@iphone</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:37:21 AM</td>
+<td>12:24:50 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>TC01_Iphone_Search</a>
+<a href="#" class="linked" test-id='1' id='9'>Verify the grade of a specific student</a>
 <div class="">
-<span class="badge badge-default">First Feature File.TC01_Iphone_Search</span>
+<span class="badge badge-default">Database Testing for School System.Verify the grade of a specific student</span>
 </div>
 </td>
 </tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@smoke</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@smoke</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:37:21 AM</td>
+<td>12:24:50 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>TC01_Iphone_Search</a>
+<a href="#" class="linked" test-id='1' id='16'>Count the total number of students in the database</a>
 <div class="">
-<span class="badge badge-default">First Feature File.TC01_Iphone_Search</span>
+<span class="badge badge-default">Database Testing for School System.Count the total number of students in the database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:24:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Check if a specific course exists in the database</a>
+<div class="">
+<span class="badge badge-default">Database Testing for School System.Check if a specific course exists in the database</span>
 </div>
 </td>
 </tr>

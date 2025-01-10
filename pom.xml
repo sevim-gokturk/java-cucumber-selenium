@@ -46,6 +46,27 @@
             <version>5.5.0</version>
             <scope>test</scope>
         </dependency>
+        <!-- Gson is a library used for converting Java objects to JSON and vice versa. It helps with handling JSON data in a simpler and more efficient way. -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <!-- JUnit Jupiter API: Provides the core API for writing and running tests with JUnit 5. This dependency allows you to use annotations like @Test, @BeforeEach, etc. -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit Jupiter Engine: The engine that runs JUnit 5 tests. This dependency is necessary to actually execute the tests written using JUnit 5. -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
         <!-- jackson-mapper-asl: A library for converting between JSON and Java objects (serialization and deserialization), based on Jackson. -->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
@@ -165,29 +186,27 @@
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
-                <!--
-                <plugin>
-                    <groupId>net.masterthought</groupId>
-                    <artifactId>maven-cucumber-reporting</artifactId>
-                    <version>5.7.0</version>
-                    <executions>
-                        <execution>
-                            <id>execution</id>
-                            <phase>verify</phase>
-                            <goals>
-                                <goal>generate</goal>
-                            </goals>
-                            <configuration>
-                                <projectName>cucumber-framework</projectName>
-                                <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
-                                <jsonFiles>
-                                    <param>target/json-reports/cucumber.json</param>
-                                </jsonFiles>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                -->
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.7.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>cucumber-framework</projectName>
+                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+                            <jsonFiles>
+                                <param>**/json-reports/*.json</param>
+                            </jsonFiles>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
