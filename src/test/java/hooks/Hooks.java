@@ -1,5 +1,7 @@
 package hooks;
 
+
+import baseUrl.SpotifyBaseUrl;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -11,12 +13,14 @@ import utilities.ConfigReader;
 import utilities.DBUtils;
 import utilities.Driver;
 
-public class Hooks {
+import static org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment.setup;
+
+public class Hooks extends SpotifyBaseUrl {
     public static RequestSpecification spec;
 
     @Before(value="@Api")
-    public void setUp(){
-        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("xxxUrl")).build();
+    public void setupScenario() {
+        setup();
     }
 
     @Before(value = "@Db")
