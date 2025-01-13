@@ -1,4 +1,5 @@
 @Api @Spotify @userProfile
+
 Feature: Spotify User Profile API Validation
   As a Spotify API user
   I want to retrieve and validate user profile details

@@ -1,19 +1,14 @@
 package hooks;
 
-
 import baseUrl.SpotifyBaseUrl;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utilities.ConfigReader;
 import utilities.DBUtils;
 import utilities.Driver;
-
-import static org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment.setup;
 
 public class Hooks extends SpotifyBaseUrl {
     public static RequestSpecification spec;
