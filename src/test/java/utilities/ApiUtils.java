@@ -20,13 +20,13 @@ public class ApiUtils {
                 .get(endpoint);
     }
 
-    public static Response postRequest(String endpoint, String body) {
+    public static Response postRequest(String endpoint, Object body) {
         return getRequestSpec()
                 .body(body)
                 .post(endpoint);
     }
 
-    public static Response putRequest(String endpoint, String body) {
+    public static Response putRequest(String endpoint, Object body) {
         return getRequestSpec()
                 .body(body)
                 .put(endpoint);
