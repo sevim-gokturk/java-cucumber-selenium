@@ -1,4 +1,4 @@
-@Api @Spotify @userProfile
+@Api @Spotify @UserProfile
 
 Feature: Spotify User Profile API Validation
   As a Spotify API user
